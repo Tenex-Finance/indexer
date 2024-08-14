@@ -3,7 +3,7 @@ description: Indexer for Tenex on Blast
 unordered_multichain_mode: true
 event_decoder: hypersync-client
 # Global contracts configuration that will be shared across all chains that are defined later in the config file
-# (i.e. Velodrome V2 on Optimism and Aerodrome on Base)
+# (i.e. Tenex on Blast)
 contracts:
   # PoolFactory contract is responsible for creating new pools
   - name: PoolFactory
