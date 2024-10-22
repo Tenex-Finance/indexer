@@ -53,8 +53,8 @@ contracts:
     handler: src/EventHandlers.ts
     events:
       # Used to update the bribe reward metrics of a particular pool
-      - event: NotifyReward(address indexed from, address indexed reward, uint256 indexed epoch, uint256 amount)
-        requiredEntities:
+      - event: (address indexed from, address indexed reward, uint256 indexed epoch, uint256 amount)
+NotifyReward        requiredEntities:
           - name: LiquidityPoolNew
             labels:
               - bribeSinglePool
