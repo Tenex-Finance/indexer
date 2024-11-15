@@ -70,7 +70,7 @@ contracts:
           - name: Token
 # Used to define the different chains that contracts (defined above) will be indexed from
 networks:
-  - id: 168587773 # Blast Sepolia
+  - id: 168587773 # Blast Sepolia chainid
     start_block: 0
     # Specification of addresses per contract type defined above
     contracts:
