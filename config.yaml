@@ -72,7 +72,7 @@ contracts:
 networks:
   - id: 168587773 # Blast Sepolia
     start_block: 0
-    # Specification of addresses per contract type defined above
+    # Specification of addresses per contract type defined above for 
     contracts:
       - name: PoolFactory
         address:
