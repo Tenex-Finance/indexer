@@ -76,17 +76,17 @@ networks:
     contracts:
       - name: PoolFactory
         address:
-          - 0xaC0d857442DA4f1541F4F737DA3351E292a688B8
+          - 0x9E2919FFa54C92bf459Bafc774A2C21ce5C0682A
       - name: Pool
         address:
           - 0xB1B390Ff7ec46Eae81A8E3463E2EdFBEC88D7C43
           - 0x7629Da077C82F2c75d9d33ec10E527450c3C7137
       - name: Voter
         address:
-          - 0xcC5821395D8Aba8DFb89D55a99ce724cBeab1bee
+          - 0x93556aa27435F24E42DAFEd72d25BFB8f8A149AB
       - name: VotingReward
         address:
-          - 0x9afdC6c6cAaD5Ff953E2cfF9777c3af2e5d796Fb # need to change
+          - 0x0BC1D7B697f5F767540F1435b658a4A7c16c1459 # need to change
       - name: PriceFetcher
         address:
           - 0x8CaD496ec7ac50D60052B88916fd6182AFE95103
