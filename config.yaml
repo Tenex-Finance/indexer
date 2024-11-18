@@ -3,7 +3,7 @@ description: Indexer for Tenex on Blast
 unordered_multichain_mode: true
 event_decoder: hypersync-client
 # Global contracts configuration that will be shared across all chains that are defined later in the config file
-# (i.e. Tenex on Blast)
+# (i.e. Tenex on Blast sepolia)
 contracts:
   # PoolFactory contract is responsible for creating new pools
   - name: PoolFactory
@@ -48,7 +48,7 @@ contracts:
         
 # Used to define the different chains that contracts (defined above) will be indexed from
 networks:
-  - id: 168587773 # Blast Sepolia chainid
+  - id: 168587773 # Blast Sepolia chainid  for TENEX
     start_block: 0
     # Specification of addresses per contract type defined above
     contracts:

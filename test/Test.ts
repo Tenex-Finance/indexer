@@ -14,7 +14,7 @@ import {
   USDC,
   WETH,
   OP,
-  VELO,
+  Tenex,
   TEN_TO_THE_3_BI,
 } from "../src/Constants";
 import { normalizeTokenAmountTo1e18 } from "../src/Helpers";
@@ -382,11 +382,11 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
 
   // Create a mock LiquidityPool entity
   const mockLiquidityPoolEntity: LiquidityPoolEntity = {
-    id: wethVELOPoolAddress, // WETH/VELO
-    name: "Volatile AMM - WETH/VELO",
+    id: wethVELOPoolAddress, // WETH/Tenex
+    name: "Volatile AMM - WETH/Tenex",
     chainID: BigInt(mockChainID),
     token0: WETH.address,
-    token1: VELO.address,
+    token1: Tenex.address,
     isStable: false,
     reserve0: 0n,
     reserve1: 0n,
@@ -419,8 +419,8 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
     lastUpdatedTimestamp: 0n,
   };
   const mockToken1Entity: Token = {
-    id: VELO.address,
-    symbol: "VELO",
+    id: Tenex.address,
+    symbol: "Tenex",
     name: "Velodrome",
     decimals: 18n,
     chainID: BigInt(mockChainID),
@@ -443,7 +443,7 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
   const mockDbWithToken0 = mockDbEmpty.entities.Token.set(mockToken0Entity);
   const mockDbWithTokens =
     mockDbWithToken0.entities.Token.set(mockToken1Entity);
-  const mockDbWithLiquidityPool = mockDbWithTokens.entities.LiquidityPool.set(
+  const mockDbWithLiquidityPool = mockDbWithTokens.entities.LiquidityPoolNew.set(
     mockLiquidityPoolEntity
   );
   const mockDbWithLatestETHPrice =
@@ -508,11 +508,11 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
 
   // Create a mock LiquidityPool entity
   const secondMockLiquidityPoolEntity: LiquidityPoolEntity = {
-    id: usdcVELOPoolAddress, // USDC/VELO
-    name: "Volatile AMM - USDC/VELO",
+    id: usdcVELOPoolAddress, // USDC/Tenex
+    name: "Volatile AMM - USDC/Tenex",
     chainID: BigInt(mockChainID),
     token0: USDC.address,
-    token1: VELO.address,
+    token1: Tenex.address,
     isStable: false,
     reserve0: 0n,
     reserve1: 0n,
@@ -716,8 +716,8 @@ describe("Unit test - findPricePerETH", () => {
   };
 
   const veloToken: Token = {
-    id: VELO.address,
-    symbol: "VELO",
+    id: Tenex.address,
+    symbol: "Tenex",
     name: "Velodrome",
     decimals: 18n,
     chainID: BigInt(mockChainID),
@@ -741,11 +741,11 @@ describe("Unit test - findPricePerETH", () => {
 
   // Expected LiquidityPool entity
   const wethVeloPoolEntity: LiquidityPoolEntity = {
-    id: wethVELOPoolAddress, // WETH/VELO
-    name: "Volatile AMM - WETH/VELO",
+    id: wethVELOPoolAddress, // WETH/Tenex
+    name: "Volatile AMM - WETH/Tenex",
     chainID: BigInt(mockChainID),
     token0: WETH.address,
-    token1: VELO.address,
+    token1: Tenex.address,
     isStable: false,
     token0Price: divideBase1e18(10000000000000000000n, 1000000000000000n),
     token1Price: divideBase1e18(1000000000000000n, 10000000000000000000n),
@@ -770,7 +770,7 @@ describe("Unit test - findPricePerETH", () => {
   let relevantPoolEntitiesToken0: LiquidityPoolEntity[] = [];
   let relevantPoolEntitiesToken1: LiquidityPoolEntity[] = [wethVeloPoolEntity];
 
-  // These are based on USDC/VELO pool liquidity
+  // These are based on USDC/Tenex pool liquidity
   let relativeToken0Price = divideBase1e18(
     5000000000000000000n,
     TEN_TO_THE_18_BI
@@ -797,7 +797,7 @@ describe("Unit test - findPricePerETH", () => {
   });
 
   it("token1PricePerETH value is correct", () => {
-    // VELO
+    // Tenex
     expect(token1PricePerETH).to.equal(
       (100n * TEN_TO_THE_18_BI) / TEN_TO_THE_6_BI
     ); // 0.0001 WETH

@@ -1,6 +1,6 @@
-## Multi-chain indexer for Velodrome V2 and Aerodrome
+## Multi-chain indexer for Tenex V2 and Aerodrome
 
-This repo contains the indexer for [Velodrome V2](https://velodrome.finance/) on Optimism and [Aerodrome](https://aerodrome.finance/) on Base.
+This repo contains the indexer for [Tenex V2](https://Tenex.finance/) on Optimism and [Aerodrome](https://aerodrome.finance/) on Base.
 
 The indexer is written in TypeScript.
 
@@ -9,7 +9,7 @@ The indexer is written in TypeScript.
 - `config.yaml`
   - Outlines which contracts should be indexed from which blockchains into the database.
   - For each contract listed, users have to define the specific events that should be ingested by the indexer.
-  - Allows the same contract & event structure to be shared across two different chains (Optimism and Base for Velodrome V2 and Aerodrome respectively)
+  - Allows the same contract & event structure to be shared across two different chains (Optimism and Base for Tenex V2 and Aerodrome respectively)
   - Defines the entities (i.e. tables) that should be loaded for each event.
   - For specific deployments of a contract on specific chains, allows users to define the address of the contract.
   - Contracts without an `address` field in the file are dynamically registered - read [here](https://docs.envio.dev/docs/dynamic-contracts) for further information on dynamic contracts.
@@ -20,7 +20,7 @@ The indexer is written in TypeScript.
   - Some entities are linked to other entities - for example, each `LiquidityPool` entity has 2 `Token` entities linked to it.
 - `src/EventHandlers.ts`
   - Outlines how each event should be used to update the entities that are outlined in the `schema.graphql` file.
-  - The event handlers are written in TypeScript for Velodrome indexer.
+  - The event handlers are written in TypeScript for Tenex indexer.
   - Consists of a `loader` and a `handler` function for each event - see [here](https://docs.envio.dev/docs/event-handlers) for detailed explanation of the purpose of the two functions.
   - Makes use of custom helper functions and types in `/src` directory - these have been added to minimize code duplication and refactored to increase readability of the overall codebase.
 
@@ -87,7 +87,7 @@ To push the Envio indexer container to a container registry login to the registr
 
 `make build-push-indexer TAG=<your_image_tag> ARCH=<desired_architecture>`
 
-example: `make build-push-indexer TAG="velodrome-indexer-prod-1" ARCH="linux/amd64"`
+example: `make build-push-indexer TAG="Tenex-indexer-prod-1" ARCH="linux/amd64"`
 
 
 ### Hydra setup

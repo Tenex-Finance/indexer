@@ -479,7 +479,7 @@ Voter.DistributeReward.handlerWithLoader({
       const currentLiquidityPool = await context.LiquidityPoolNew.get(
         poolAddress
       );
-      // Load the reward token (VELO for Optimism and AERO for Base) for conversion of emissions amount into USD
+      // Load the reward token (Tenex for Optimism and AERO for Base) for conversion of emissions amount into USD
       const rewardToken = await context.Token.get(
         CHAIN_CONSTANTS[event.chainId].rewardToken.address +
         "-" +
@@ -497,7 +497,7 @@ Voter.DistributeReward.handlerWithLoader({
     if (loaderReturn) {
       const { currentLiquidityPool, rewardToken } = loaderReturn;
       // Dev note: Assumption here is that the GaugeCreated event has already been indexed and the Gauge entity has been created
-      // Dev note: Assumption here is that the reward token (VELO for Optimism and AERO for Base) entity has already been created at this point
+      // Dev note: Assumption here is that the reward token (Tenex for Optimism and AERO for Base) entity has already been created at this point
       if (currentLiquidityPool && rewardToken) {
         let normalizedEmissionsAmount = normalizeTokenAmountTo1e18(
           event.params.amount,
@@ -549,7 +549,7 @@ VotingReward.NotifyReward.handlerWithLoader({
         poolAddress
       );
 
-      // Load the reward token (VELO for Optimism and AERO for Base) for conversion of emissions amount into USD
+      // Load the reward token (Tenex for Optimism and AERO for Base) for conversion of emissions amount into USD
       const rewardToken = await context.Token.get(
         event.params.reward + "-" + event.chainId.toString()
       );
@@ -567,7 +567,7 @@ VotingReward.NotifyReward.handlerWithLoader({
     if (loaderReturn) {
       const { currentLiquidityPool, rewardToken } = loaderReturn;
       // Dev note: Assumption here is that the GaugeCreated event has already been indexed and the Gauge entity has been created
-      // Dev note: Assumption here is that the reward token (VELO for Optimism and AERO for Base) entity has already been created at this point
+      // Dev note: Assumption here is that the reward token (Tenex for Optimism and AERO for Base) entity has already been created at this point
       if (currentLiquidityPool && rewardToken) {
         let normalizedBribesAmount = normalizeTokenAmountTo1e18(
           event.params.amount,

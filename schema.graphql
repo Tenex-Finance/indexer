@@ -17,7 +17,7 @@ type LiquidityPoolNew {
   numberOfSwaps: BigInt! # total number of swaps in the pool
   token0Price: BigInt! # price of token0 relative to token1
   token1Price: BigInt! # price of token1 relative to token0
-  totalEmissions: BigInt! # total emissions for the pool in reward token units (VELO form Optimism and AERO for Base)
+  totalEmissions: BigInt! # total emissions for the pool in reward token units (Tenex form Optimism and AERO for Base)
   totalEmissionsUSD: BigInt! # total emissions for the pool in USD
   totalBribesUSD: BigInt! # total bribes for the pool in USD
   lastUpdatedTimestamp: BigInt! # timestamp of last update
@@ -55,7 +55,7 @@ type LiquidityPoolHourlySnapshot {
   numberOfSwaps: BigInt! # total number of swaps in the pool
   token0Price: BigInt! # price of token0 relative to token1
   token1Price: BigInt! # price of token1 relative to token0
-  totalEmissions: BigInt! # total emissions for the pool in reward token units (VELO form Optimism and AERO for Base)
+  totalEmissions: BigInt! # total emissions for the pool in reward token units (Tenex form Optimism and AERO for Base)
   totalEmissionsUSD: BigInt! # total emissions for the pool in USD
   totalBribesUSD: BigInt! # total bribes for the pool in USD
   lastUpdatedTimestamp: BigInt! # timestamp of last update
@@ -79,7 +79,7 @@ type LiquidityPoolDailySnapshot {
   numberOfSwaps: BigInt! # total number of swaps in the pool
   token0Price: BigInt! # price of token0 relative to token1
   token1Price: BigInt! # price of token1 relative to token0
-  totalEmissions: BigInt! # total emissions for the pool in reward token units (VELO form Optimism and AERO for Base)
+  totalEmissions: BigInt! # total emissions for the pool in reward token units (Tenex form Optimism and AERO for Base)
   totalEmissionsUSD: BigInt! # total emissions for the pool in USD
   totalBribesUSD: BigInt! # total bribes for the pool in USD
   lastUpdatedTimestamp: BigInt! # timestamp of last update
@@ -104,7 +104,7 @@ type LiquidityPoolWeeklySnapshot {
   numberOfSwaps: BigInt! # total number of swaps in the pool
   token0Price: BigInt! # price of token0 relative to token1
   token1Price: BigInt! # price of token1 relative to token0
-  totalEmissions: BigInt! # total emissions for the pool in reward token units (VELO form Optimism and AERO for Base)
+  totalEmissions: BigInt! # total emissions for the pool in reward token units (Tenex form Optimism and AERO for Base)
   totalEmissionsUSD: BigInt! # total emissions for the pool in USD
   totalBribesUSD: BigInt! # total bribes for the pool in USD
   lastUpdatedTimestamp: BigInt! # timestamp of last update
