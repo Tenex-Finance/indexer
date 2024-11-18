@@ -1,6 +1,6 @@
 name: Tenex
 description: Indexer for Tenex on Blast
-unordered_multichain_mode: true
+unordered_multichain_mode: false
 event_decoder: hypersync-client
 # Global contracts configuration that will be shared across all chains that are defined later in the config file
 # (i.e. Tenex on Blast sepolia)
@@ -47,6 +47,7 @@ contracts:
       - event: PriceFetched(address indexed token, uint256 price)
         
 # Used to define the different chains that contracts (defined above) will be indexed from
+rollback_on_reorg: false
 networks:
   - id: 168587773 # Blast Sepolia chainid  for TENEX
     start_block: 0
