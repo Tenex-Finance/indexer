@@ -1,4 +1,4 @@
-import { Token, Pool } from "./CustomTypes";
+import { TokenInfo, Pool } from "./CustomTypes";
 // import { LatestETHPriceEntity, StateStoreEntity } from "./src/Types.gen";
 
 export const TEN_TO_THE_3_BI = BigInt(10 ** 3);
@@ -12,29 +12,29 @@ export const SECONDS_IN_A_WEEK = BigInt(604800);
 // export const STATE_STORE_ID = "STATE";
 
 // Hardcoded WETH, USDC and OP token addresses with decimals
-export const WETH: Token = {
+export const WETH: TokenInfo = {
   address: "0x4200000000000000000000000000000000000023",
   symbol: "WETH",
 };
 
-export const TENEX: Token = {
+export const TENEX: TokenInfo = {
   address: "0x8Fe5C378B39DBdC984F2FfB8631227758340631A", // Right now OTK
   symbol: "OTK",
 };
 
-const USDB: Token = {
+const USDB: TokenInfo = {
   address: "0x4200000000000000000000000000000000000022",
   symbol: "USDB",
 };
 
-const tSPACE: Token = {
+const tSPACE: TokenInfo = {
   address: "0xD88957c98D65E9bee30304290f734847De09B990",
   symbol: "tSPACE",
 };
 
 // list of WHITELISTED tokens with their symbol and decimals to be used in pricing
 
-const BLAST_SEPOLIA_WHITELISTED_TOKENS: Token[] = [WETH, USDB, tSPACE];
+const BLAST_SEPOLIA_WHITELISTED_TOKENS: TokenInfo[] = [WETH, USDB, tSPACE];
 
 const BLAST_SEPOLIA_TESTING_POOL_ADDRESSES: string[] = [
   "0xB1B390Ff7ec46Eae81A8E3463E2EdFBEC88D7C43",
@@ -43,15 +43,15 @@ const BLAST_SEPOLIA_TESTING_POOL_ADDRESSES: string[] = [
 
 // Object containing all the constants for a chain
 type chainConstants = {
-  eth: Token;
-  usdc: Token;
+  eth: TokenInfo;
+  usdc: TokenInfo;
   firstPriceFetchedBlockNumber: number;
-  rewardToken: Token;
+  rewardToken: TokenInfo;
   rpcURL: string;
   stablecoinPools: Pool[];
   stablecoinPoolAddresses: string[];
   testingPoolAddresses: string[];
-  whitelistedTokens: Token[];
+  whitelistedTokens: TokenInfo[];
   whitelistedTokenAddresses: string[];
 };
 

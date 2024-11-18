@@ -10,42 +10,27 @@ contracts:
     handler: src/EventHandlers.ts
     events:
       - event: PoolCreated(address indexed token0, address indexed token1, bool indexed stable, address pool, uint256 unnamed)
-        requiredEntities:
-          - name: Token
-            arrayLabels:
-              - poolTokens
-        isAsync: true
+       
   # Pool contract emits all the events related to a particular swap pool
   - name: Pool
     handler: src/EventHandlers.ts
     events:
       # Used to update the total fees earned by a swap pool
       - event: Fees(address indexed sender, uint256 amount0, uint256 amount1)
-        requiredEntities:
-          - name: LiquidityPoolNew
+       
       # Used to update the swap and volume metrics of a particular pool and user
       - event: Swap(address indexed sender, address indexed to, uint256 amount0In, uint256 amount1In, uint256 amount0Out, uint256 amount1Out)
-        requiredEntities:
-          - name: LiquidityPoolNew
-          - name: User
+        
       # Used to update the liquidity values of a particular pool
       - event: Sync(uint256 reserve0, uint256 reserve1)
-        requiredEntities:
-          - name: LiquidityPoolNew
-          - name: Token
+        
   # Voter contract is responsible for creating reward contracts and distributing rewards to the liquidity pools
   - name: Voter
     handler: src/EventHandlers.ts
     events:
       # Used to update the reward emission metrics of a particular pool
       - event: DistributeReward(address indexed sender, address indexed gauge, uint256 amount)
-        requiredEntities:
-          - name: LiquidityPoolNew
-            labels:
-              - emissionSinglePool
-          - name: Token
-            labels:
-              - emissionRewardToken
+        
       # Used to update the reward address details of a particular pool
       - event: GaugeCreated(address indexed poolFactory, address indexed votingRewardsFactory, address indexed gaugeFactory, address pool, address bribeVotingReward, address feeVotingReward, address gauge, address creator)
   # VotingReward contract is responsible for distributing bribe rewards to the liquidity providers
@@ -54,20 +39,13 @@ contracts:
     events:
       # Used to update the bribe reward metrics of a particular pool
       - event: NotifyReward(address indexed from, address indexed reward, uint256 indexed epoch, uint256 amount)       
-        requiredEntities:
-          - name: LiquidityPoolNew
-            labels:
-              - bribeSinglePool
-          - name: Token
-            labels:
-              - bribeRewardToken
+       
   - name: PriceFetcher
     handler: src/EventHandlers.ts
     events:
       # Used to update the price of a particular token in USD
       - event: PriceFetched(address indexed token, uint256 price)
-        requiredEntities:
-          - name: Token
+        
 # Used to define the different chains that contracts (defined above) will be indexed from
 networks:
   - id: 168587773 # Blast Sepolia chainid
@@ -79,8 +57,7 @@ networks:
           - 0x9E2919FFa54C92bf459Bafc774A2C21ce5C0682A
       - name: Pool
         address:
-          - 0xB1B390Ff7ec46Eae81A8E3463E2EdFBEC88D7C43
-          - 0x7629Da077C82F2c75d9d33ec10E527450c3C7137
+          - 0x9E2919FFa54C92bf459Bafc774A2C21ce5C0682A
       - name: Voter
         address:
           - 0x93556aa27435F24E42DAFEd72d25BFB8f8A149AB
