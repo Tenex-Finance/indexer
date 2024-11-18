@@ -27,5 +27,8 @@
   "mocha": "^10.2.0",
   "prettier": "^2.5.1",
   "ts-node": "^10.9.1"
+},
+"optionalDependencies": {
+  "generated": "./generated"
 }
 }

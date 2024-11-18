@@ -26,6 +26,10 @@ importers:
       ts-node:
         specifier: ^10.9.1
         version: 10.9.1(@types/node@18.18.6)(typescript@5.2.2)
+    optionalDependencies:
+      generated:
+        specifier: ./generated
+        version: link:generated
     devDependencies:
       '@types/chai':
         specifier: ^4.3.11
