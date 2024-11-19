@@ -58,7 +58,8 @@ networks:
           - 0x9E2919FFa54C92bf459Bafc774A2C21ce5C0682A
       - name: Pool
         address:
-          - 0x9E2919FFa54C92bf459Bafc774A2C21ce5C0682A
+          - 0x4329dE1411d5ab7DC4C93B96a98B5b0eCCD2D0ae
+          - 0x97Aa515D439c68d56D1651B7da79fd25E8CDd649
       - name: Voter
         address:
           - 0x93556aa27435F24E42DAFEd72d25BFB8f8A149AB

@@ -462,7 +462,7 @@ Voter.GaugeCreated.handler(async ({ event, context }) => {
     poolAddress: event.params.pool,
     gaugeAddress: event.params.gauge,
     bribeVotingRewardAddress: event.params.bribeVotingReward,
-    // feeVotingRewardAddress: event.params.feeVotingReward, // currently not used
+     feeVotingRewardAddress: event.params.feeVotingReward, // currently not used
   };
 
   addRewardAddressDetails(event.chainId, currentPoolRewardAddressMapping);

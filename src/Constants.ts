@@ -18,8 +18,8 @@ export const WETH: TokenInfo = {
 };
 
 export const TENEX: TokenInfo = {
-  address: "0x8Fe5C378B39DBdC984F2FfB8631227758340631A", // Right now OTK
-  symbol: "OTK",
+  address: "0xe59a3d87c883cbae7f3eb5f70e97ddf9dd759434", // Right now Tenex
+  symbol: "tTenex",
 };
 
 const USDB: TokenInfo = {
@@ -37,8 +37,8 @@ const tSPACE: TokenInfo = {
 const BLAST_SEPOLIA_WHITELISTED_TOKENS: TokenInfo[] = [WETH, USDB, tSPACE];
 
 const BLAST_SEPOLIA_TESTING_POOL_ADDRESSES: string[] = [
-  "0xB1B390Ff7ec46Eae81A8E3463E2EdFBEC88D7C43",
-  "0x7629Da077C82F2c75d9d33ec10E527450c3C7137",
+  "0x4329dE1411d5ab7DC4C93B96a98B5b0eCCD2D0ae",
+  "0x97Aa515D439c68d56D1651B7da79fd25E8CDd649"
 ];
 
 // Object containing all the constants for a chain
@@ -60,7 +60,7 @@ const BLAST_SEPOLIA_CONSTANTS: chainConstants = {
   usdc: USDB,
   firstPriceFetchedBlockNumber: 0,
   rewardToken: TENEX,
-  rpcURL: "https://sepolia.blast.io",
+  rpcURL: "https://blast-sepolia.infura.io",
   stablecoinPools: [],
   stablecoinPoolAddresses: [],
   testingPoolAddresses: BLAST_SEPOLIA_TESTING_POOL_ADDRESSES,
