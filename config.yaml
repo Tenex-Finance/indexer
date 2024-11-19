@@ -68,4 +68,4 @@ networks:
           - 0x0BC1D7B697f5F767540F1435b658a4A7c16c1459 # need to change
       - name: PriceFetcher
         address:
-          - 0x5FbDB2315678afecb367f032d93F642f64180aa3
+           - 0x5FbDB2315678afecb367f032d93F642f64180aa3

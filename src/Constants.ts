@@ -60,7 +60,7 @@ const BLAST_SEPOLIA_CONSTANTS: chainConstants = {
   usdc: USDB,
   firstPriceFetchedBlockNumber: 0,
   rewardToken: TENEX,
-  rpcURL: "https://blast-sepolia.infura.io",
+  rpcURL: "https://sepolia.blast.io",
   stablecoinPools: [],
   stablecoinPoolAddresses: [],
   testingPoolAddresses: BLAST_SEPOLIA_TESTING_POOL_ADDRESSES,
