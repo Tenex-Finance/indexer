@@ -1,4 +1,5 @@
 import { TokenInfo, Pool } from "./CustomTypes";
+import dotenv from "dotenv";
 // import { LatestETHPriceEntity, StateStoreEntity } from "./src/Types.gen";
 
 export const TEN_TO_THE_3_BI = BigInt(10 ** 3);
@@ -60,7 +61,7 @@ const BLAST_SEPOLIA_CONSTANTS: chainConstants = {
   usdc: USDB,
   firstPriceFetchedBlockNumber: 0,
   rewardToken: TENEX,
-  rpcURL: "https://sepolia.blast.io",
+  rpcURL: process.env.BLAST_RPC_URL || "https://blast-sepolia.infura.io/v3/79d185ec44d74b6197515765c22648ea",
   stablecoinPools: [],
   stablecoinPoolAddresses: [],
   testingPoolAddresses: BLAST_SEPOLIA_TESTING_POOL_ADDRESSES,
