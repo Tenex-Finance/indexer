@@ -549,7 +549,7 @@ VotingReward.NotifyReward.handlerWithLoader({
         poolAddress
       );
 
-      // Load the reward token (Tenex for Optimism and AERO for Base) for conversion of emissions amount into USD
+      // Load the reward token (Tenex for Blast  for conversion of emissions amount into USD
       const rewardToken = await context.Token.get(
         event.params.reward + "-" + event.chainId.toString()
       );
@@ -611,6 +611,7 @@ PriceFetcher.PriceFetched.handlerWithLoader({
   handler: async ({ event, context, loaderReturn }) => {
     if (loaderReturn) {
       const { currentToken } = loaderReturn;
+      console.log(currentToken)
       // The token entity should be created via PoolCreated event from the PoolFactory contract
       if (currentToken) {
         // Create a new instance of Token to be updated in the DB

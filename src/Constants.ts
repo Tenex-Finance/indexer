@@ -19,27 +19,26 @@ export const WETH: TokenInfo = {
 };
 
 export const TENEX: TokenInfo = {
-  address: "0x2A0F4633f96176328c8116e5E887E459393e67b3", // Right now Tenex
-  symbol: "tTENEX",
+  address: "0x8Fe5C378B39DBdC984F2FfB8631227758340631A", // Right now OTK
+  symbol: "OTK",
 };
 
 const USDB: TokenInfo = {
-  address: "0x352A23D14d2D91D6D6E1274a069d325C104A8bf6",
-  symbol: "tUSDT",
+  address: "0x4200000000000000000000000000000000000022",
+  symbol: "USDB",
 };
 
 const tSPACE: TokenInfo = {
-  address: "0xbfed524207d81158825991f622e8c752ab3d1bf9",
-  symbol: "tDOGE",
+  address: "0xD88957c98D65E9bee30304290f734847De09B990",
+  symbol: "tSPACE",
 };
-
 // list of WHITELISTED tokens with their symbol and decimals to be used in pricing
 
 const BLAST_SEPOLIA_WHITELISTED_TOKENS: TokenInfo[] = [WETH, USDB, tSPACE];
 
 const BLAST_SEPOLIA_TESTING_POOL_ADDRESSES: string[] = [
-  "0xF92A2225A961123020eeB4811894110c347486fC",
-    "0xEa0C27191479167B10b67b1c5403dF3e69697bDD"
+  "0xB1B390Ff7ec46Eae81A8E3463E2EdFBEC88D7C43",
+    "0x7629Da077C82F2c75d9d33ec10E527450c3C7137"
 ];
 
 // Object containing all the constants for a chain
@@ -61,7 +60,7 @@ const BLAST_SEPOLIA_CONSTANTS: chainConstants = {
   usdc: USDB,
   firstPriceFetchedBlockNumber: 0,
   rewardToken: TENEX,
-  rpcURL: process.env.BLAST_RPC_URL || "https://blast-sepolia.infura.io/v3/c8cce76e60e34e63abd920284ed92f50",
+  rpcURL: process.env.BLAST_RPC_URL || "https://sepolia.blast.io",
   stablecoinPools: [],
   stablecoinPoolAddresses: [],
   testingPoolAddresses: BLAST_SEPOLIA_TESTING_POOL_ADDRESSES,
@@ -70,6 +69,9 @@ const BLAST_SEPOLIA_CONSTANTS: chainConstants = {
     (token) => token.address
   ),
 };
+
+
+
 
 // Key is chain ID
 export const CHAIN_CONSTANTS: Record<number, chainConstants> = {
