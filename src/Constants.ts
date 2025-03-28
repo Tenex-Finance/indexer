@@ -93,7 +93,7 @@ const BLAST_SEPOLIA_CONSTANTS: chainConstants = {
 
 // Key is chain ID
 export const CHAIN_CONSTANTS: Record<number, chainConstants> = {
-  168587773: BLAST_SEPOLIA_CONSTANTS,
+  81457: BLAST_SEPOLIA_CONSTANTS,
 };
 
 export const CacheCategory = {
