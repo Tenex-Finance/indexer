@@ -14,32 +14,52 @@ export const SECONDS_IN_A_WEEK = BigInt(604800);
 
 // Hardcoded WETH, USDC and OP token addresses with decimals
 export const WETH: TokenInfo = {
-  address: "0x4200000000000000000000000000000000000023",
+  address: "0x4300000000000000000000000000000000000004",
   symbol: "WETH",
 };
 
 export const TENEX: TokenInfo = {
-  address: "0x2A0F4633f96176328c8116e5E887E459393e67b3", // Right now Tenex
-  symbol: "tTENEX",
+  address: "0xD8bB56F73Fd80f68e77Aff8a0C8D20792D7AE411", // Right now Tenex
+  symbol: "DFCC",
 };
 
 const USDB: TokenInfo = {
-  address: "0x352A23D14d2D91D6D6E1274a069d325C104A8bf6",
-  symbol: "tUSDT",
+  address: "0x4300000000000000000000000000000000000003",
+  symbol: "USDB",
 };
 
-const tSPACE: TokenInfo = {
-  address: "0xbfed524207d81158825991f622e8c752ab3d1bf9",
-  symbol: "tDOGE",
+const dAAVE: TokenInfo = {
+  address: "0xDa4cEF2BF02328D77aAD0B7278518Aa5B88ed272",
+  symbol: "dAAVE",
+};
+const dUSDC: TokenInfo = {
+  address: "0xeBf61A86C51BA5bA353e1BA8964AfdF244420DA0",
+  symbol: "dUSDC",
+};
+const dAMAN: TokenInfo = {
+  address: "0x121aB9FFE0C106C644358530f03B6554DD2010b6",
+  symbol: "dAMAN",
+};
+const dBHOODEV: TokenInfo = {
+  address: "0x9B5330939db13d32D1f4001Bf8e76430dd0891aD",
+  symbol: "dBHOODEV",
+};
+const dCURVE: TokenInfo = {
+  address: "0x6664fF027Ef43D4f58B2B6Ce2418a8521Eb5aed4",
+  symbol: "dCURVE",
+};
+const dOP: TokenInfo = {
+  address: "0x4252003b4c397BE7d5E8A3Afc087D4966B9F0418",
+  symbol: "dOP",
 };
 
 // list of WHITELISTED tokens with their symbol and decimals to be used in pricing
 
-const BLAST_SEPOLIA_WHITELISTED_TOKENS: TokenInfo[] = [WETH, USDB, tSPACE];
+const BLAST_SEPOLIA_WHITELISTED_TOKENS: TokenInfo[] = [WETH, USDB, dAAVE, dOP, dCURVE, dBHOODEV, dAMAN, dUSDC, dAAVE];
 
 const BLAST_SEPOLIA_TESTING_POOL_ADDRESSES: string[] = [
-  "0xF92A2225A961123020eeB4811894110c347486fC",
-    "0xEa0C27191479167B10b67b1c5403dF3e69697bDD"
+  "0xECF512C41df0f44c6aF4416DB3372FcA17d8AF8a",
+    "0xe55ce2c6A5a4C3eEAb3EBcB71b0E26C78A87048b"
 ];
 
 // Object containing all the constants for a chain
