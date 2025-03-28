@@ -49,7 +49,7 @@ contracts:
 # Used to define the different chains that contracts (defined above) will be indexed from
 rollback_on_reorg: false
 networks:
-  - id: 168587773 # Blast Sepolia chainid  for TENEX
+  - id: 81457 # Blast  chainid  for DFCC
     start_block: 0
     # Specification of addresses per contract type defined above
     contracts:
