@@ -19,7 +19,7 @@ export const WETH: TokenInfo = {
 };
 
 export const TENEX: TokenInfo = {
-  address: "0xD8bB56F73Fd80f68e77Aff8a0C8D20792D7AE411", // Right now Tenex
+  address: "0xE733C5D935F617817d0d31f08bc7C569373434a3", // Right now Tenex
   symbol: "DFCC",
 };
 
@@ -28,38 +28,39 @@ const USDB: TokenInfo = {
   symbol: "USDB",
 };
 
-const dAAVE: TokenInfo = {
-  address: "0xDa4cEF2BF02328D77aAD0B7278518Aa5B88ed272",
-  symbol: "dAAVE",
+const YIELDRA: TokenInfo = {
+  address: "0xf59da24d8B1535eA4089F5d448cb8b1D92726A74",
+  symbol: "YIELDRA",
 };
-const dUSDC: TokenInfo = {
-  address: "0xeBf61A86C51BA5bA353e1BA8964AfdF244420DA0",
-  symbol: "dUSDC",
+const DEFORA: TokenInfo = {
+  address: "0x1c190dF6119De5DB62c938ba79dcDf4aff579c23",
+  symbol: "DEFORA",
 };
-const dAMAN: TokenInfo = {
-  address: "0x121aB9FFE0C106C644358530f03B6554DD2010b6",
-  symbol: "dAMAN",
+const FINEXA: TokenInfo = {
+  address: "0x34540Fd8E286666239ff869701981edc400daC1d",
+  symbol: "FINEXA",
 };
-const dBHOODEV: TokenInfo = {
-  address: "0x9B5330939db13d32D1f4001Bf8e76430dd0891aD",
-  symbol: "dBHOODEV",
+const VAULTIQ: TokenInfo = {
+  address: "0xD8428A28517806E0f3072068F7De6f0602A31088",
+  symbol: "VAULTIQ",
 };
-const dCURVE: TokenInfo = {
-  address: "0x6664fF027Ef43D4f58B2B6Ce2418a8521Eb5aed4",
-  symbol: "dCURVE",
+const SWAPRLY: TokenInfo = {
+  address: "0x1D7DCd2208Df8e646e39Fa83Bd1e1d24Cd28C948",
+  symbol: "SWAPRLY",
 };
-const dOP: TokenInfo = {
-  address: "0x4252003b4c397BE7d5E8A3Afc087D4966B9F0418",
-  symbol: "dOP",
+const DFDC: TokenInfo = {
+  address: "0x116448fCAA75903e942b4CB97d3ccD8464B550DD",
+  symbol: "DFDC",
 };
+
 
 // list of WHITELISTED tokens with their symbol and decimals to be used in pricing
 
-const BLAST_SEPOLIA_WHITELISTED_TOKENS: TokenInfo[] = [WETH, USDB, dAAVE, dOP, dCURVE, dBHOODEV, dAMAN, dUSDC, dAAVE];
+const BLAST_SEPOLIA_WHITELISTED_TOKENS: TokenInfo[] = [WETH, USDB, YIELDRA, DEFORA, FINEXA, VAULTIQ, SWAPRLY, DFDC];
 
 const BLAST_SEPOLIA_TESTING_POOL_ADDRESSES: string[] = [
-  "0xECF512C41df0f44c6aF4416DB3372FcA17d8AF8a",
-    "0xe55ce2c6A5a4C3eEAb3EBcB71b0E26C78A87048b"
+  "0xEe1300F6b11A564B9296b659F1d26dEA98966230",
+    "0x4a111c632d237e9E8f8C9e908c4f554B1F4aC008"
 ];
 
 // Object containing all the constants for a chain
@@ -78,7 +79,7 @@ type chainConstants = {
 
 const BLAST_SEPOLIA_CONSTANTS: chainConstants = {
   eth: WETH,
-  usdc: USDB,
+  usdc: DFDC,
   firstPriceFetchedBlockNumber: 0,
   rewardToken: TENEX,
   rpcURL: process.env.ENVIO_BLAST_RPC_URL || '',
