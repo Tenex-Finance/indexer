@@ -11,7 +11,7 @@ import {
   STATE_STORE_ID,
   TEN_TO_THE_6_BI,
   TEN_TO_THE_18_BI,
-  USDC,
+  USDB,
   WETH,
   OP,
   Tenex,
@@ -29,7 +29,7 @@ const token1PriceUSD = 2000n;
 
 const mockBlockTimestamp = 1629811200;
 
-const wethVELOPoolAddress = "0x58e6433a6903886e440ddf519ecc573c4046a6b2";
+const wethTENEXPoolAddress = "0x58e6433a6903886e440ddf519ecc573c4046a6b2";
 
 // Testing PoolCreated event
 describe("PoolCreated event correctly creates LiquidityPool and Token entities", () => {
@@ -39,7 +39,7 @@ describe("PoolCreated event correctly creates LiquidityPool and Token entities",
   // Creating mock PoolCreated event
   const mockPoolCreatedEvent = PoolFactory.PoolCreated.createMockEvent({
     token0: WETH.address,
-    token1: USDC.address, // USDC
+    token1: USDB.address, // USDB
     pool: mockPoolAddress,
     stable: false,
     mockEventData: { blockTimestamp: mockBlockTimestamp, chainId: mockChainID },
@@ -60,10 +60,10 @@ describe("PoolCreated event correctly creates LiquidityPool and Token entities",
     // Expected LiquidityPool entity
     const expectedLiquidityPoolEntity: LiquidityPoolEntity = {
       id: mockPoolAddress,
-      name: "Volatile AMM - WETH/USDC",
+      name: "Volatile AMM - WETH/USDB",
       chainID: BigInt(mockChainID),
       token0: WETH.address + "-" + mockChainID.toString(),
-      token1: USDC.address + "-" + mockChainID.toString(),
+      token1: USDB.address + "-" + mockChainID.toString(),
       isStable: false,
       reserve0: 0n,
       reserve1: 0n,
@@ -96,7 +96,7 @@ describe("PoolCreated event correctly creates LiquidityPool and Token entities",
       WETH.address + "-" + mockChainID.toString()
     );
     let actualToken1Entity = (await updatedMockDb).entities.Token.get(
-      USDC.address + "-" + mockChainID.toString()
+      USDB.address + "-" + mockChainID.toString()
     );
 
     // Expected Token entities
@@ -112,8 +112,8 @@ describe("PoolCreated event correctly creates LiquidityPool and Token entities",
     };
     // Expected Token entities
     const expectedToken1Entity: Token = {
-      id: USDC.address + "-" + mockChainID.toString(),
-      symbol: "USDC",
+      id: USDB.address + "-" + mockChainID.toString(),
+      symbol: "USDB",
       name: "USD Coin",
       decimals: 6n,
       chainID: BigInt(mockChainID),
@@ -236,20 +236,20 @@ describe("Fees event correctly updates LiquidityPool", () => {
 });
 
 // Testing an arbitrary Sync event correctly updates LiquidityPool
-describe("Sync event correctly updates WETH/USDC pool entity", () => {
+describe("Sync event correctly updates WETH/USDB pool entity", () => {
   // Create mock db
   const mockDbEmpty = MockDb.createMockDb();
 
   const reserveAmount0 = 10n * TEN_TO_THE_18_BI; // 10 WETH
-  const reserveAmount1 = 20000n * TEN_TO_THE_6_BI; // 20,000 USDC
+  const reserveAmount1 = 20000n * TEN_TO_THE_6_BI; // 20,000 USDB
 
   // Create a mock LiquidityPool entity
   const mockLiquidityPoolEntity: LiquidityPoolEntity = {
     id: mockPoolAddress,
-    name: "Volatile AMM - WETH/USDC",
+    name: "Volatile AMM - WETH/USDB",
     chainID: BigInt(mockChainID),
     token0: WETH.address,
-    token1: USDC.address,
+    token1: USDB.address,
     isStable: false,
     reserve0: 0n,
     reserve1: 0n,
@@ -282,8 +282,8 @@ describe("Sync event correctly updates WETH/USDC pool entity", () => {
     lastUpdatedTimestamp: 0n,
   };
   const mockToken1Entity: Token = {
-    id: USDC.address,
-    symbol: "USDC",
+    id: USDB.address,
+    symbol: "USDB",
     name: "USD Coin",
     decimals: 6n,
     chainID: BigInt(mockChainID),
@@ -382,7 +382,7 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
 
   // Create a mock LiquidityPool entity
   const mockLiquidityPoolEntity: LiquidityPoolEntity = {
-    id: wethVELOPoolAddress, // WETH/Tenex
+    id: wethTENEXPoolAddress, // WETH/Tenex
     name: "Volatile AMM - WETH/Tenex",
     chainID: BigInt(mockChainID),
     token0: WETH.address,
@@ -421,7 +421,7 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
   const mockToken1Entity: Token = {
     id: Tenex.address,
     symbol: "Tenex",
-    name: "Velodrome",
+    name: "Tenex",
     decimals: 18n,
     chainID: BigInt(mockChainID),
     pricePerETH: 0n,
@@ -460,7 +460,7 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
     mockEventData: {
       blockTimestamp: mockBlockTimestamp,
       chainId: mockChainID,
-      srcAddress: wethVELOPoolAddress,
+      srcAddress: wethTENEXPoolAddress,
     },
   });
 
@@ -504,14 +504,14 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
   const secondReserveAmount0 = 1000000n;
   const secondReserveAmount1 = 40000000000000000000n;
 
-  const usdcVELOPoolAddress = "0x8134a2fdc127549480865fb8e5a9e8a8a95a54c5";
+  const usdbTENEXPoolAddress = "0x8134a2fdc127549480865fb8e5a9e8a8a95a54c5";
 
   // Create a mock LiquidityPool entity
   const secondMockLiquidityPoolEntity: LiquidityPoolEntity = {
-    id: usdcVELOPoolAddress, // USDC/Tenex
-    name: "Volatile AMM - USDC/Tenex",
+    id: usdbTENEXPoolAddress, // USDB/Tenex
+    name: "Volatile AMM - USDB/Tenex",
     chainID: BigInt(mockChainID),
-    token0: USDC.address,
+    token0: USDB.address,
     token1: Tenex.address,
     isStable: false,
     reserve0: 0n,
@@ -534,9 +534,9 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
   };
 
   // Mock Token entities
-  const usdcToken: Token = {
-    id: USDC.address,
-    symbol: "USDC",
+  const usdbToken: Token = {
+    id: USDB.address,
+    symbol: "USDB",
     name: "USD Coin",
     decimals: 6n,
     chainID: BigInt(mockChainID),
@@ -547,7 +547,7 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
 
   // Updating the mock DB with the mock entities
   const secondMockDbWithToken0 =
-    updatedMockDbAfterFirstSync.entities.Token.set(usdcToken);
+    updatedMockDbAfterFirstSync.entities.Token.set(usdbToken);
   const secondMockDbWithLiquidityPool =
     secondMockDbWithToken0.entities.LiquidityPool.set(
       secondMockLiquidityPoolEntity
@@ -560,7 +560,7 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
     mockEventData: {
       blockTimestamp: mockBlockTimestamp,
       chainId: mockChainID,
-      srcAddress: usdcVELOPoolAddress,
+      srcAddress: usdbTENEXPoolAddress,
     },
   });
 
@@ -573,7 +573,7 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
   it("First Sync event: Reserve and token price values of LiquidityPool entity are updated correctly", () => {
     // Getting the entity from the mock database
     const actualLiquidityPoolEntity =
-      updatedMockDb.entities.LiquidityPool.get(wethVELOPoolAddress);
+      updatedMockDb.entities.LiquidityPool.get(wethTENEXPoolAddress);
 
     let normalizedReserve0Amount = normalizeTokenAmountTo1e18(
       reserveAmount0,
@@ -639,11 +639,11 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
   it("Second Sync event: Reserve and token price values of LiquidityPool entity are updated correctly", () => {
     // Getting the entity from the mock database
     const actualLiquidityPoolEntity =
-      secondUpdatedMockDb.entities.LiquidityPool.get(usdcVELOPoolAddress);
+      secondUpdatedMockDb.entities.LiquidityPool.get(usdbTENEXPoolAddress);
 
     let normalizedReserve0Amount = normalizeTokenAmountTo1e18(
       secondReserveAmount0,
-      Number(usdcToken.decimals)
+      Number(usdbToken.decimals)
     );
     let normalizedReserve1Amount = normalizeTokenAmountTo1e18(
       secondReserveAmount1,
@@ -677,7 +677,7 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
   it("Second Sync event: Token entities are updated correctly", () => {
     // Getting the entity from the mock database
     const actualToken0Entity = secondUpdatedMockDb.Token.get(
-      usdcToken.id
+      usdbToken.id
     );
     const actualToken1Entity = secondUpdatedMockDb.Token.get(
       mockToken1Entity.id
@@ -685,7 +685,7 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
 
     // Expected Token entities
     const expectedToken0Entity: Token = {
-      ...usdcToken,
+      ...usdbToken,
       pricePerETH: (1n * TEN_TO_THE_18_BI) / 2000n, // 0.0005 WETH
       pricePerUSD: 1n * TEN_TO_THE_18_BI, // 1 USD
       lastUpdatedTimestamp: BigInt(secondMockSyncEvent.),
@@ -704,9 +704,9 @@ describe("Sequence of Sync events correctly updates pool and token entity", () =
 });
 
 describe("Unit test - findPricePerETH", () => {
-  const usdcToken: Token = {
-    id: USDC.address,
-    symbol: "USDC",
+  const usdbToken: Token = {
+    id: USDB.address,
+    symbol: "USDB",
     name: "USD Coin",
     decimals: 6n,
     chainID: BigInt(mockChainID),
@@ -715,10 +715,10 @@ describe("Unit test - findPricePerETH", () => {
     lastUpdatedTimestamp: 0n,
   };
 
-  const veloToken: Token = {
+  const TenexToken: Token = {
     id: Tenex.address,
     symbol: "Tenex",
-    name: "Velodrome",
+    name: "Tenex",
     decimals: 18n,
     chainID: BigInt(mockChainID),
     pricePerETH: (100n * TEN_TO_THE_18_BI) / TEN_TO_THE_6_BI, // 0.0001 WETH
@@ -737,11 +737,11 @@ describe("Unit test - findPricePerETH", () => {
     lastUpdatedTimestamp: 0n,
   };
 
-  const whitelistedTokensList = [usdcToken, veloToken, wethToken];
+  const whitelistedTokensList = [usdbToken, TenexToken, wethToken];
 
   // Expected LiquidityPool entity
-  const wethVeloPoolEntity: LiquidityPoolEntity = {
-    id: wethVELOPoolAddress, // WETH/Tenex
+  const wethTenexPoolEntity: LiquidityPoolEntity = {
+    id: wethTENEXPoolAddress, // WETH/Tenex
     name: "Volatile AMM - WETH/Tenex",
     chainID: BigInt(mockChainID),
     token0: WETH.address,
@@ -768,9 +768,9 @@ describe("Unit test - findPricePerETH", () => {
   };
 
   let relevantPoolEntitiesToken0: LiquidityPoolEntity[] = [];
-  let relevantPoolEntitiesToken1: LiquidityPoolEntity[] = [wethVeloPoolEntity];
+  let relevantPoolEntitiesToken1: LiquidityPoolEntity[] = [wethTenexPoolEntity];
 
-  // These are based on USDC/Tenex pool liquidity
+  // These are based on USDB/Tenex pool liquidity
   let relativeToken0Price = divideBase1e18(
     5000000000000000000n,
     TEN_TO_THE_18_BI
@@ -781,8 +781,8 @@ describe("Unit test - findPricePerETH", () => {
   );
 
   let { token0PricePerETH, token1PricePerETH } = findPricePerETH(
-    usdcToken,
-    veloToken,
+    usdbToken,
+    TenexToken,
     whitelistedTokensList,
     relevantPoolEntitiesToken0,
     relevantPoolEntitiesToken1,
@@ -792,7 +792,7 @@ describe("Unit test - findPricePerETH", () => {
   );
 
   it("token0PricePerETH value is correct", () => {
-    // USDC
+    // USDB
     expect(token0PricePerETH).to.equal((1n * TEN_TO_THE_18_BI) / 2000n); // 0.0005 WETH
   });
 
