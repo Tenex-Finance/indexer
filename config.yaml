@@ -1,9 +1,9 @@
 name: Tenex
-description: Indexer for Tenex on Blast
+description: Indexer for Tenex on BSC
 unordered_multichain_mode: false
 event_decoder: hypersync-client
 # Global contracts configuration that will be shared across all chains that are defined later in the config file
-# (i.e. Tenex on Blast sepolia)
+# (i.e. Tenex on BSC testnet)
 contracts:
   - name: PoolFactory
     handler: src/EventHandlers.ts
@@ -38,25 +38,25 @@ contracts:
 # Used to define the different chains that contracts (defined above) will be indexed from
 rollback_on_reorg: false
 networks:
-  - id: 81457 # Blast  chainid  for TENEX
+  - id: 97 # BSC  chainid  for TENEX
     start_block: 0
     # Specification of addresses per contract type defined above
     contracts:
       - name: PoolFactory
         address:
-          - 0x9FC1091Bf704F2a74399E2ae98517202cab821b6
+          - 0xE8f79323A023123A0AfB8Ac3F4f48d29e2AC6083
       - name: Pool
         address:
-          - 0x794af1d173807dAb1aC6e1c46EA6927A361209Bf
-          - 0x1D95F3f2Efb0a56Cd35e315bb74BD4AeEf2198A1
+          - 0xB721107F2BCEfa5301017809d64EeB92316922fE
+          - 0x34a5525920ba3936c9e3cd79262A7a54A2EE413b
          
          
       - name: Voter
         address:
-          - 0xDaE876Af086d7E2ee2CF5434faAB6DD54732BcA5
+          - 0x5CB8429791781de84a99d1f213588F5B299Dcd19
       - name: VotingReward
         address:
-          - 0x83CCe00595b74D47Eb4872da4Eae36AaD1E557C2 # need to change
+          - 0x19d372D7977A314A85EF50F4e8D0a83d06CC3fA8 # need to change
       - name: PriceFetcher
         address:
-           - 0x053ebbdA0FDF36623ac40C5136df3789883b0493
+           - 0x66F296709989e47D0d5666B5cffb1201132e216a

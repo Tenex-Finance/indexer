@@ -11,21 +11,30 @@ export const SECONDS_IN_A_DAY = BigInt(86400);
 export const SECONDS_IN_A_WEEK = BigInt(604800);
 
 // export const STATE_STORE_ID = "STATE";
+/*
+tbudt 0x6a826Cb6A223a92Ad6d7a71dDF5EF946B37c2A4f
+  Successfully deployed  tbta  0x190BfEd7cc26b019F90b0B92e4845A52BB023fa3
+  Successfully deployed  tbsol 0x90df4Ae764e52d66bD4B3a6cf910bCD4DA9c1091
+  Successfully deployed  tbop  0x59B5fA8F46E70e7B61463749B01FE5A89d5e4ebD
+  Successfully deployed  tbave 0xF662DAe273910c53501060F2376c39093e087a12
+  Successfully deployed  tbdog 0xfd443219921F01E2f8746D4E435386fff9947096
+
+*/
 
 // Hardcoded WETH, USDB and OP token addresses with decimals
-export const WETH: TokenInfo = {
-  address: "0x4300000000000000000000000000000000000004",
-  symbol: "WETH",
+export const TBTA: TokenInfo = {
+  address: "0x6a826Cb6A223a92Ad6d7a71dDF5EF946B37c2A4f",
+  symbol: "TBTA",
 };
 
 export const TENEX: TokenInfo = {
-  address: "0xC4B7846887648B4bef80db245411B0323Edd2a66", // Right now Tenex
+  address: "0xea298402F2c54B05B96f1857F7186Af7db765884", // Right now Tenex
   symbol: "TENEX",
 };
 
-const USDB: TokenInfo = {
-  address: "0x4300000000000000000000000000000000000003",
-  symbol: "USDB",
+const TBSOL: TokenInfo = {
+  address: "0x90df4Ae764e52d66bD4B3a6cf910bCD4DA9c1091",
+  symbol: "TBSOL",
 };
 
 const ETH: TokenInfo = {
@@ -33,27 +42,30 @@ const ETH: TokenInfo = {
   symbol: "ETH",
 };
 
-const BLAST: TokenInfo = {
-  address: "0xb1a5700fA2358173Fe465e6eA4Ff52E36e88E2ad",
-  symbol: "BLAST",
+const TBOP: TokenInfo = {
+  address: "0x59B5fA8F46E70e7B61463749B01FE5A89d5e4ebD",
+  symbol: "TBOP",
 };
 
-const WBTC: TokenInfo = {
-  address: "0xF7bc58b8D8f97ADC129cfC4c9f45Ce3C0E1D2692",
-  symbol: "WBTC",
+const TBAVE: TokenInfo = {
+  address: "0xF662DAe273910c53501060F2376c39093e087a12",
+  symbol: "TBAVE",
 };
-
+const TBDOG: TokenInfo = {
+  address: "0xfd443219921F01E2f8746D4E435386fff9947096",
+  symbol: "TBDOG",
+};
 
 
 
 
 // list of WHITELISTED tokens with their symbol and decimals to be used in pricing
 
-const BLAST_WHITELISTED_TOKENS: TokenInfo[] = [WETH, USDB, ETH, BLAST, WBTC, TENEX, USDB];
+const BSC_WHITELISTED_TOKENS: TokenInfo[] = [TBDOG, TBAVE, ETH, TBOP, TBSOL, TENEX, TBTA];
 
-const BLAST_TESTING_POOL_ADDRESSES: string[] = [
-  "0x794af1d173807dAb1aC6e1c46EA6927A361209Bf",
-  "0x1D95F3f2Efb0a56Cd35e315bb74BD4AeEf2198A1"
+const BSC_TESTING_POOL_ADDRESSES: string[] = [
+  "0xB721107F2BCEfa5301017809d64EeB92316922fE",
+    "0x34a5525920ba3936c9e3cd79262A7a54A2EE413b"
 ];
 
 // Object containing all the constants for a chain
@@ -70,24 +82,24 @@ type chainConstants = {
   whitelistedTokenAddresses: string[];
 };
 
-const BLAST_CONSTANTS: chainConstants = {
-  eth: WETH,
-  usdb: USDB,
+const BSC_CONSTANTS: chainConstants = {
+  eth: ETH,
+  usdb: TBTA,
   firstPriceFetchedBlockNumber: 0,
   rewardToken: TENEX,
   rpcURL: process.env.ENVIO_BLAST_RPC_URL || '',
   stablecoinPools: [],
   stablecoinPoolAddresses: [],
-  testingPoolAddresses: BLAST_TESTING_POOL_ADDRESSES,
-  whitelistedTokens: BLAST_WHITELISTED_TOKENS,
-  whitelistedTokenAddresses: BLAST_WHITELISTED_TOKENS.map(
+  testingPoolAddresses: BSC_TESTING_POOL_ADDRESSES,
+  whitelistedTokens: BSC_WHITELISTED_TOKENS,
+  whitelistedTokenAddresses: BSC_WHITELISTED_TOKENS.map(
     (token) => token.address
   ),
 };
 
 // Key is chain ID
 export const CHAIN_CONSTANTS: Record<number, chainConstants> = {
-  81457: BLAST_CONSTANTS,
+  97: BSC_CONSTANTS,
 };
 
 export const CacheCategory = {

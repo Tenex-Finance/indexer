@@ -7,7 +7,7 @@
     "watch": "tsc --watch",
     "dev": "envio dev",
     "codegen": "envio codegen",
-    "start": "ts-node generated/src/Index.bs.js",
+    "start": "envio start",
     "test": "mocha --require ts-node/register test/**/*.ts",
     "enable-hydra": "./hack/hydra-mode/hydra-mode.sh"
   },
@@ -22,7 +22,8 @@
   "dependencies": {
     "@types/mocha": "^10.0.6",
     "chai": "4.3.10",
-    "envio": "^2.11.10",
+    "dotenv": "^17.1.0",
+    "envio": "^2.25.0",
     "mocha": "^10.2.0",
     "prettier": "^2.5.1",
     "ts-node": "^10.9.1"
