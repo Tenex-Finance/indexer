@@ -7,7 +7,7 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_PASSWORD: ${ENVIO_POSTGRES_PASSWORD:-Tenex650#}}
+      POSTGRES_PASSWORD: ${ENVIO_POSTGRES_PASSWORD:-Tenex650#}
       POSTGRES_USER: ${ENVIO_PG_USER:-tenex}
       POSTGRES_DB: ${ENVIO_PG_DATABASE:-tenex-prod}
     networks:

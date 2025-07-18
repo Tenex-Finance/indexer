@@ -40,6 +40,7 @@ rollback_on_reorg: false
 networks:
   - id: 97 # BSC  chainid  for TENEX
     start_block: 0
+   
     # Specification of addresses per contract type defined above
     contracts:
       - name: PoolFactory

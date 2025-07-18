@@ -34,7 +34,7 @@ export const TENEX: TokenInfo = {
 
 const TBSOL: TokenInfo = {
   address: "0x90df4Ae764e52d66bD4B3a6cf910bCD4DA9c1091",
-  symbol: "TBSOL",
+  symbol: "tBSOL",
 };
 
 const ETH: TokenInfo = {
@@ -44,16 +44,16 @@ const ETH: TokenInfo = {
 
 const TBOP: TokenInfo = {
   address: "0x59B5fA8F46E70e7B61463749B01FE5A89d5e4ebD",
-  symbol: "TBOP",
+  symbol: "tBOP",
 };
 
 const TBAVE: TokenInfo = {
   address: "0xF662DAe273910c53501060F2376c39093e087a12",
-  symbol: "TBAVE",
+  symbol: "tBAVE",
 };
 const TBDOG: TokenInfo = {
   address: "0xfd443219921F01E2f8746D4E435386fff9947096",
-  symbol: "TBDOG",
+  symbol: "tBDOG",
 };
 
 
@@ -87,7 +87,7 @@ const BSC_CONSTANTS: chainConstants = {
   usdb: TBTA,
   firstPriceFetchedBlockNumber: 0,
   rewardToken: TENEX,
-  rpcURL: process.env.ENVIO_BLAST_RPC_URL || '',
+  rpcURL: process.env.ENVIO_BSC_RPC_URL || 'https://bsc-testnet.publicnode.com',
   stablecoinPools: [],
   stablecoinPoolAddresses: [],
   testingPoolAddresses: BSC_TESTING_POOL_ADDRESSES,

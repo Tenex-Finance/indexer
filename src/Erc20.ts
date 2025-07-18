@@ -107,7 +107,7 @@ export async function getErc20TokenDetails(
       console.error(`[getErc20TokenDetails] Error:`, err);
     }
     // Don't leak RPC URL
-    // console.error(`[getErc20TokenDetails] RPC URL used:`, rpcURL);
+     console.error(`[getErc20TokenDetails] RPC URL used:`, rpcURL);
     console.error(
       `[getErc20TokenDetails] Contract ABI:`,
       JSON.stringify(contractABI)
