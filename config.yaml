@@ -48,9 +48,16 @@ networks:
           - 0xE8f79323A023123A0AfB8Ac3F4f48d29e2AC6083
       - name: Pool
         address:
-          - 0xB721107F2BCEfa5301017809d64EeB92316922fE
           - 0x34a5525920ba3936c9e3cd79262A7a54A2EE413b
-         
+          - 0xD574A0802b06f59B3dAdd43b5b2e7003f45388b4
+          - 0x8e1199101Ac89D7f4c9dF87A4Bc73d1f428D9aB9
+          - 0xB721107F2BCEfa5301017809d64EeB92316922fE
+          - 0x16716511c4b31e91BD8d1FAb17D60eE0AbC19a0C
+          - 0xbe9EF3285cde16219eda02298aB001d8241b7220
+          - 0x66b4C2713B9B73Cb92f509c4A21E0b73f3370Daa
+          - 0x16716511c4b31e91BD8d1FAb17D60eE0AbC19a0C
+          - 0xB721107F2BCEfa5301017809d64EeB92316922fE
+
          
       - name: Voter
         address:
@@ -60,4 +67,4 @@ networks:
           - 0x19d372D7977A314A85EF50F4e8D0a83d06CC3fA8 # need to change
       - name: PriceFetcher
         address:
-           - 0x66F296709989e47D0d5666B5cffb1201132e216a
+           - 0xB13fAf14a25409A15E4Df64C143b6049aC2b44dF
