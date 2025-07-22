@@ -55,13 +55,18 @@ const TBDOG: TokenInfo = {
   address: "0xfd443219921F01E2f8746D4E435386fff9947096",
   symbol: "tBDOG",
 };
+const TBUDT: TokenInfo = {
+  address: "0x6a826Cb6A223a92Ad6d7a71dDF5EF946B37c2A4f",
+  symbol: "tbudt",
+};
+
 
 
 
 
 // list of WHITELISTED tokens with their symbol and decimals to be used in pricing
 
-const BSC_WHITELISTED_TOKENS: TokenInfo[] = [TBDOG, TBAVE, ETH, TBOP, TBSOL, TENEX, TBTA];
+const BSC_WHITELISTED_TOKENS: TokenInfo[] = [TBDOG, TBAVE, ETH, TBOP, TBSOL, TENEX, TBTA, TBUDT];
 
 const BSC_TESTING_POOL_ADDRESSES: string[] = [
   "0xB721107F2BCEfa5301017809d64EeB92316922fE",
@@ -84,7 +89,7 @@ type chainConstants = {
 
 const BSC_CONSTANTS: chainConstants = {
   eth: ETH,
-  usdb: TBTA,
+  usdb: TBUDT,
   firstPriceFetchedBlockNumber: 0,
   rewardToken: TENEX,
   rpcURL: process.env.ENVIO_BSC_RPC_URL || 'https://bsc-testnet.publicnode.com',

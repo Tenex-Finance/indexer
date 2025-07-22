@@ -239,8 +239,8 @@ Pool.Swap.handlerWithLoader({
         token0Instance,
         token1Instance,
         to_address,
-        toUser,
-        isLiquidityPool,
+        //toUser,
+        //isLiquidityPool,
       } = loaderReturn;
 
       // Same as above.
