@@ -3,7 +3,7 @@ services:
     image: ghcr.io/hydradatabase/hydra:latest
     restart: always
     ports:
-      - "${ENVIO_PG_PORT:-5433}:5432"
+      - "${ENVIO_PG_PORT:-5432}:5432"
     volumes:
       - db_data_hydra:/var/lib/postgresql/data
     environment:

@@ -11,54 +11,35 @@ export const SECONDS_IN_A_DAY = BigInt(86400);
 export const SECONDS_IN_A_WEEK = BigInt(604800);
 
 // export const STATE_STORE_ID = "STATE";
-/*
-tbudt 0x6a826Cb6A223a92Ad6d7a71dDF5EF946B37c2A4f
-  Successfully deployed  tbta  0x190BfEd7cc26b019F90b0B92e4845A52BB023fa3
-  Successfully deployed  tbsol 0x90df4Ae764e52d66bD4B3a6cf910bCD4DA9c1091
-  Successfully deployed  tbop  0x59B5fA8F46E70e7B61463749B01FE5A89d5e4ebD
-  Successfully deployed  tbave 0xF662DAe273910c53501060F2376c39093e087a12
-  Successfully deployed  tbdog 0xfd443219921F01E2f8746D4E435386fff9947096
 
-*/
 
 // Hardcoded WETH, USDB and OP token addresses with decimals
-export const TBTA: TokenInfo = {
-  address: "0x6a826Cb6A223a92Ad6d7a71dDF5EF946B37c2A4f",
-  symbol: "TBTA",
+export const WETH: TokenInfo = {
+  address: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+  symbol: "WBNB",
 };
 
 export const TENEX: TokenInfo = {
-  address: "0xea298402F2c54B05B96f1857F7186Af7db765884", // Right now Tenex
+  address: "0xA5d4F9862349b8F7967F3CE8D4db742449364bB1", // Right now Tenex
   symbol: "TENEX",
 };
 
-const TBSOL: TokenInfo = {
-  address: "0x90df4Ae764e52d66bD4B3a6cf910bCD4DA9c1091",
-  symbol: "tBSOL",
+const BSCUSD: TokenInfo = {
+  address: "0x55d398326f99059fF775485246999027B3197955",
+  symbol: "BSC-USD",
 };
 
 const ETH: TokenInfo = {
   address: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
-  symbol: "ETH",
+  symbol: "BNB",
 };
 
-const TBOP: TokenInfo = {
-  address: "0x59B5fA8F46E70e7B61463749B01FE5A89d5e4ebD",
-  symbol: "tBOP",
+const USDB: TokenInfo = {
+  address: "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+  symbol: "USDC",
 };
 
-const TBAVE: TokenInfo = {
-  address: "0xF662DAe273910c53501060F2376c39093e087a12",
-  symbol: "tBAVE",
-};
-const TBDOG: TokenInfo = {
-  address: "0xfd443219921F01E2f8746D4E435386fff9947096",
-  symbol: "tBDOG",
-};
-const TBUDT: TokenInfo = {
-  address: "0x6a826Cb6A223a92Ad6d7a71dDF5EF946B37c2A4f",
-  symbol: "tbudt",
-};
+
 
 
 
@@ -66,11 +47,11 @@ const TBUDT: TokenInfo = {
 
 // list of WHITELISTED tokens with their symbol and decimals to be used in pricing
 
-const BSC_WHITELISTED_TOKENS: TokenInfo[] = [TBDOG, TBAVE, ETH, TBOP, TBSOL, TENEX, TBTA, TBUDT];
+const BSC_WHITELISTED_TOKENS: TokenInfo[] = [ETH, BSCUSD, WETH, TENEX, USDB];
 
 const BSC_TESTING_POOL_ADDRESSES: string[] = [
-  "0xB721107F2BCEfa5301017809d64EeB92316922fE",
-    "0x34a5525920ba3936c9e3cd79262A7a54A2EE413b"
+  "0x3a497D73A272382AE445A0628A2C41c3B0889EB3",
+    "0xe8dC96b7980A1243F25468a513801241CA1CdC72"
 ];
 
 // Object containing all the constants for a chain
@@ -89,10 +70,10 @@ type chainConstants = {
 
 const BSC_CONSTANTS: chainConstants = {
   eth: ETH,
-  usdb: TBUDT,
+  usdb: USDB,
   firstPriceFetchedBlockNumber: 0,
   rewardToken: TENEX,
-  rpcURL: process.env.ENVIO_BSC_RPC_URL || 'https://bsc-testnet.publicnode.com',
+  rpcURL: process.env.ENVIO_BSC_RPC_URL || 'https://bnb-mainnet.g.alchemy.com/v2/cHHlg7dPcXVn5jwQ23VT0',
   stablecoinPools: [],
   stablecoinPoolAddresses: [],
   testingPoolAddresses: BSC_TESTING_POOL_ADDRESSES,
@@ -104,7 +85,7 @@ const BSC_CONSTANTS: chainConstants = {
 
 // Key is chain ID
 export const CHAIN_CONSTANTS: Record<number, chainConstants> = {
-  97: BSC_CONSTANTS,
+  56: BSC_CONSTANTS,
 };
 
 export const CacheCategory = {

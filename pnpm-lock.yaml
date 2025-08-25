@@ -16,19 +16,22 @@ importers:
         version: 4.3.10
       dotenv:
         specifier: ^17.1.0
-        version: 17.1.0
+        version: 17.2.1
       envio:
-        specifier: ^2.25.0
-        version: 2.25.0(typescript@5.8.3)(zod@3.25.76)
+        specifier: ^2.27.6
+        version: 2.27.6(typescript@5.9.2)(zod@3.25.76)
       mocha:
         specifier: ^10.2.0
         version: 10.8.2
       prettier:
         specifier: ^2.5.1
         version: 2.8.8
+      rescript-envsafe:
+        specifier: ^5.0.0
+        version: 5.0.0(rescript-schema@9.3.0(rescript@11.1.3))(rescript@11.1.3)
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.2(@types/node@18.19.117)(typescript@5.8.3)
+        version: 10.9.2(@types/node@18.19.123)(typescript@5.9.2)
     optionalDependencies:
       generated:
         specifier: ./generated
@@ -39,16 +42,16 @@ importers:
         version: 4.3.20
       '@types/node':
         specifier: ^18.16.1
-        version: 18.19.117
+        version: 18.19.123
       js-yaml:
         specifier: 4.1.0
         version: 4.1.0
       typescript:
         specifier: ^5.0.4
-        version: 5.8.3
+        version: 5.9.2
       web3:
         specifier: ^4.4.0
-        version: 4.16.0(typescript@5.8.3)(zod@3.25.76)
+        version: 4.16.0(typescript@5.9.2)(zod@3.25.76)
 
   generated:
     dependencies:
@@ -71,8 +74,8 @@ importers:
         specifier: 16.4.5
         version: 16.4.5
       envio:
-        specifier: 2.25.0
-        version: 2.25.0(typescript@5.8.3)(zod@3.25.76)
+        specifier: 2.27.6
+        version: 2.27.6(typescript@5.9.2)(zod@3.25.76)
       ethers:
         specifier: 6.8.0
         version: 6.8.0
@@ -114,10 +117,10 @@ importers:
         version: 9.3.0(rescript@11.1.3)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@types/node@18.19.117)(typescript@5.8.3)
+        version: 10.9.1(@types/node@18.19.123)(typescript@5.9.2)
       viem:
         specifier: 2.21.0
-        version: 2.21.0(typescript@5.8.3)(zod@3.25.76)
+        version: 2.21.0(typescript@5.9.2)(zod@3.25.76)
       yargs:
         specifier: 17.7.2
         version: 17.7.2
@@ -196,8 +199,8 @@ packages:
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
     engines: {node: '>=6.0.0'}
 
-  '@jridgewell/sourcemap-codec@1.5.4':
-    resolution: {integrity: sha512-VT2+G1VQs/9oz078bLrYbecdZKs912zQlkelYpuf+SXF+QvZDYJlbx/LSx+meSAwdDFnF8FVXW92AVjjkVmgFw==}
+  '@jridgewell/sourcemap-codec@1.5.5':
+    resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
 
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
@@ -259,8 +262,8 @@ packages:
   '@types/node@18.15.13':
     resolution: {integrity: sha512-N+0kuo9KgrUQ1Sn/ifDXsvg0TTleP7rIy4zOBGECxAljqvqfqpTfzx0Q1NUedOixRMBfe2Whhb056a42cWs26Q==}
 
-  '@types/node@18.19.117':
-    resolution: {integrity: sha512-hcxGs9TfQGghOM8atpRT+bBMUX7V8WosdYt98bQ59wUToJck55eCOlemJ+0FpOZOQw5ff7LSi9+IO56KvYEFyQ==}
+  '@types/node@18.19.123':
+    resolution: {integrity: sha512-K7DIaHnh0mzVxreCR9qwgNxp3MH9dltPNIEddW9MYUlcKAzm+3grKNSTe2vCJHI1FaLpvpL5JGJrz1UZDKYvDg==}
 
   '@types/ws@8.5.3':
     resolution: {integrity: sha512-6YOoWjruKj1uLf3INHH7D3qTXwFfEsg1kf3c0uDdSBJwfa/llkwIjrAGV7j7mVgGNbzTQ3HiHKKDXl6bJPD97w==}
@@ -565,8 +568,8 @@ packages:
     resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
     engines: {node: '>=12'}
 
-  dotenv@17.1.0:
-    resolution: {integrity: sha512-tG9VUTJTuju6GcXgbdsOuRhupE8cb4mRgY5JLRCh4MtGoVo3/gfGUtOMwmProM6d0ba2mCFvv+WrpYJV6qgJXQ==}
+  dotenv@17.2.1:
+    resolution: {integrity: sha512-kQhDYKZecqnM0fCnzI5eIv5L4cAe/iRI+HqMbO/hbRdTAeXDG+M9FjipUxNfbARuEg4iHIbhnhs78BCHNbSxEQ==}
     engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
@@ -586,28 +589,28 @@ packages:
   end-of-stream@1.4.5:
     resolution: {integrity: sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg==}
 
-  envio-darwin-arm64@2.25.0:
-    resolution: {integrity: sha512-HWjnXdRd18fnnaseIwdEoO2MAJbnkQsKiTHiY+lNuGH9Guc2c86iNYFHsoq/zGE4WkrVk3SHcR9lVMvE/u/dzA==}
+  envio-darwin-arm64@2.27.6:
+    resolution: {integrity: sha512-W9huSy/3Hd1z3dwovSQfdtC7TOD5x+hz1lrleFeG1wX8XTPdKgnV1uGkG2fe9yNjZfg/3reSOsQ9pKsVmbLthA==}
     cpu: [arm64]
     os: [darwin]
 
-  envio-darwin-x64@2.25.0:
-    resolution: {integrity: sha512-sms3H58XT8t+Wl1+L8KS5Yo7zlReA0YVq27HTKBp1yy8vC4qBKazkzLDASQnhwTv+NYJfxgX6zcP4vm2h8ZJXQ==}
+  envio-darwin-x64@2.27.6:
+    resolution: {integrity: sha512-uXZpwnDX0TNZQc4EINEmdtDYU3rbxNReMOwb0Znmrw9GaV2S1vjJLA01Kr0ZV16Fk0Y1xYl+cnDhw8UxZTztnQ==}
     cpu: [x64]
     os: [darwin]
 
-  envio-linux-arm64@2.25.0:
-    resolution: {integrity: sha512-AAhTOR/EbnWb/Mi4/D54OZByMf13EKVLt8I3koQVQxO2nmANonyGfMyRFH+HcWqIssXqTEAwlGPim3Gh0znFdQ==}
+  envio-linux-arm64@2.27.6:
+    resolution: {integrity: sha512-ghBLWyA+AyePvQoOMe+s4EesyA/CSqu3nlBw8HQ812buNCUABiThfSrDPAjaFxlNn3fHVwxh+epuKdaOSo6Fow==}
     cpu: [arm64]
     os: [linux]
 
-  envio-linux-x64@2.25.0:
-    resolution: {integrity: sha512-IgeORIEpN++U0gwHOPRqcT/d2G0v/GM2fYo0w2uwduHsCyTXT7Z1Npo8aGvRPcifczrUBvzBEVbXbegQgdu3dg==}
+  envio-linux-x64@2.27.6:
+    resolution: {integrity: sha512-LO8yMHmtQcVCwR5Q3Ou5Yd5s/DHbSr11nwqugxP7iMV570BoiUHt22L1R+IjeXPqBIt+qA+00frVd1M9l/jfFw==}
     cpu: [x64]
     os: [linux]
 
-  envio@2.25.0:
-    resolution: {integrity: sha512-RHtCFHXxdMcd1agewkGFZxtuEzareXaPa7uahu+8KPl82sckhxlz0GOBcTG0pv5Teu/Zw85Xh2SQMKlqQewyBg==}
+  envio@2.27.6:
+    resolution: {integrity: sha512-ZRBLHn9fWBM17qPogxLyDreaFuhMUYNuBlQPUM5efCYql41+y64ouWk6OFi7WP//183BSjw3wAJKa7ann85yNQ==}
     hasBin: true
 
   es-define-property@1.0.1:
@@ -1386,8 +1389,8 @@ packages:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
 
-  typescript@5.8.3:
-    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+  typescript@5.9.2:
+    resolution: {integrity: sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -1676,12 +1679,12 @@ snapshots:
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
-  '@jridgewell/sourcemap-codec@1.5.4': {}
+  '@jridgewell/sourcemap-codec@1.5.5': {}
 
   '@jridgewell/trace-mapping@0.3.9':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.5.4
+      '@jridgewell/sourcemap-codec': 1.5.5
 
   '@noble/curves@1.2.0':
     dependencies:
@@ -1733,25 +1736,25 @@ snapshots:
 
   '@types/node@18.15.13': {}
 
-  '@types/node@18.19.117':
+  '@types/node@18.19.123':
     dependencies:
       undici-types: 5.26.5
 
   '@types/ws@8.5.3':
     dependencies:
-      '@types/node': 18.19.117
+      '@types/node': 18.19.123
 
   '@types/yoga-layout@1.9.2': {}
 
-  abitype@0.7.1(typescript@5.8.3)(zod@3.25.76):
+  abitype@0.7.1(typescript@5.9.2)(zod@3.25.76):
     dependencies:
-      typescript: 5.8.3
+      typescript: 5.9.2
     optionalDependencies:
       zod: 3.25.76
 
-  abitype@1.0.5(typescript@5.8.3)(zod@3.25.76):
+  abitype@1.0.5(typescript@5.9.2)(zod@3.25.76):
     optionalDependencies:
-      typescript: 5.8.3
+      typescript: 5.9.2
       zod: 3.25.76
 
   abort-controller@3.0.0:
@@ -2015,7 +2018,7 @@ snapshots:
 
   dotenv@16.4.5: {}
 
-  dotenv@17.1.0: {}
+  dotenv@17.2.1: {}
 
   dunder-proto@1.0.1:
     dependencies:
@@ -2033,19 +2036,19 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  envio-darwin-arm64@2.25.0:
+  envio-darwin-arm64@2.27.6:
     optional: true
 
-  envio-darwin-x64@2.25.0:
+  envio-darwin-x64@2.27.6:
     optional: true
 
-  envio-linux-arm64@2.25.0:
+  envio-linux-arm64@2.27.6:
     optional: true
 
-  envio-linux-x64@2.25.0:
+  envio-linux-x64@2.27.6:
     optional: true
 
-  envio@2.25.0(typescript@5.8.3)(zod@3.25.76):
+  envio@2.27.6(typescript@5.9.2)(zod@3.25.76):
     dependencies:
       '@envio-dev/hypersync-client': 0.6.5
       bignumber.js: 9.1.2
@@ -2054,12 +2057,12 @@ snapshots:
       prom-client: 15.0.0
       rescript: 11.1.3
       rescript-schema: 9.3.0(rescript@11.1.3)
-      viem: 2.21.0(typescript@5.8.3)(zod@3.25.76)
+      viem: 2.21.0(typescript@5.9.2)(zod@3.25.76)
     optionalDependencies:
-      envio-darwin-arm64: 2.25.0
-      envio-darwin-x64: 2.25.0
-      envio-linux-arm64: 2.25.0
-      envio-linux-x64: 2.25.0
+      envio-darwin-arm64: 2.27.6
+      envio-darwin-x64: 2.27.6
+      envio-linux-arm64: 2.27.6
+      envio-linux-x64: 2.27.6
     transitivePeerDependencies:
       - bufferutil
       - typescript
@@ -2854,39 +2857,39 @@ snapshots:
 
   tr46@0.0.3: {}
 
-  ts-node@10.9.1(@types/node@18.19.117)(typescript@5.8.3):
+  ts-node@10.9.1(@types/node@18.19.123)(typescript@5.9.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 18.19.117
+      '@types/node': 18.19.123
       acorn: 8.15.0
       acorn-walk: 8.3.4
       arg: 4.1.3
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 5.8.3
+      typescript: 5.9.2
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  ts-node@10.9.2(@types/node@18.19.117)(typescript@5.8.3):
+  ts-node@10.9.2(@types/node@18.19.123)(typescript@5.9.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 18.19.117
+      '@types/node': 18.19.123
       acorn: 8.15.0
       acorn-walk: 8.3.4
       arg: 4.1.3
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 5.8.3
+      typescript: 5.9.2
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
@@ -2903,7 +2906,7 @@ snapshots:
       media-typer: 0.3.0
       mime-types: 2.1.35
 
-  typescript@5.8.3: {}
+  typescript@5.9.2: {}
 
   undici-types@5.26.5: {}
 
@@ -2929,19 +2932,19 @@ snapshots:
 
   vary@1.1.2: {}
 
-  viem@2.21.0(typescript@5.8.3)(zod@3.25.76):
+  viem@2.21.0(typescript@5.9.2)(zod@3.25.76):
     dependencies:
       '@adraffy/ens-normalize': 1.10.0
       '@noble/curves': 1.4.0
       '@noble/hashes': 1.4.0
       '@scure/bip32': 1.4.0
       '@scure/bip39': 1.3.0
-      abitype: 1.0.5(typescript@5.8.3)(zod@3.25.76)
+      abitype: 1.0.5(typescript@5.9.2)(zod@3.25.76)
       isows: 1.0.4(ws@8.17.1)
       webauthn-p256: 0.0.5
       ws: 8.17.1
     optionalDependencies:
-      typescript: 5.8.3
+      typescript: 5.9.2
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -2968,9 +2971,9 @@ snapshots:
     dependencies:
       web3-types: 1.10.0
 
-  web3-eth-abi@4.4.1(typescript@5.8.3)(zod@3.25.76):
+  web3-eth-abi@4.4.1(typescript@5.9.2)(zod@3.25.76):
     dependencies:
-      abitype: 0.7.1(typescript@5.8.3)(zod@3.25.76)
+      abitype: 0.7.1(typescript@5.9.2)(zod@3.25.76)
       web3-errors: 1.3.1
       web3-types: 1.10.0
       web3-utils: 4.3.3
@@ -2989,13 +2992,13 @@ snapshots:
       web3-utils: 4.3.3
       web3-validator: 2.0.6
 
-  web3-eth-contract@4.7.2(typescript@5.8.3)(zod@3.25.76):
+  web3-eth-contract@4.7.2(typescript@5.9.2)(zod@3.25.76):
     dependencies:
       '@ethereumjs/rlp': 5.0.2
       web3-core: 4.7.1
       web3-errors: 1.3.1
-      web3-eth: 4.11.1(typescript@5.8.3)(zod@3.25.76)
-      web3-eth-abi: 4.4.1(typescript@5.8.3)(zod@3.25.76)
+      web3-eth: 4.11.1(typescript@5.9.2)(zod@3.25.76)
+      web3-eth-abi: 4.4.1(typescript@5.9.2)(zod@3.25.76)
       web3-types: 1.10.0
       web3-utils: 4.3.3
       web3-validator: 2.0.6
@@ -3006,13 +3009,13 @@ snapshots:
       - utf-8-validate
       - zod
 
-  web3-eth-ens@4.4.0(typescript@5.8.3)(zod@3.25.76):
+  web3-eth-ens@4.4.0(typescript@5.9.2)(zod@3.25.76):
     dependencies:
       '@adraffy/ens-normalize': 1.11.0
       web3-core: 4.7.1
       web3-errors: 1.3.1
-      web3-eth: 4.11.1(typescript@5.8.3)(zod@3.25.76)
-      web3-eth-contract: 4.7.2(typescript@5.8.3)(zod@3.25.76)
+      web3-eth: 4.11.1(typescript@5.9.2)(zod@3.25.76)
+      web3-eth-contract: 4.7.2(typescript@5.9.2)(zod@3.25.76)
       web3-net: 4.1.0
       web3-types: 1.10.0
       web3-utils: 4.3.3
@@ -3031,10 +3034,10 @@ snapshots:
       web3-utils: 4.3.3
       web3-validator: 2.0.6
 
-  web3-eth-personal@4.1.0(typescript@5.8.3)(zod@3.25.76):
+  web3-eth-personal@4.1.0(typescript@5.9.2)(zod@3.25.76):
     dependencies:
       web3-core: 4.7.1
-      web3-eth: 4.11.1(typescript@5.8.3)(zod@3.25.76)
+      web3-eth: 4.11.1(typescript@5.9.2)(zod@3.25.76)
       web3-rpc-methods: 1.3.0
       web3-types: 1.10.0
       web3-utils: 4.3.3
@@ -3046,12 +3049,12 @@ snapshots:
       - utf-8-validate
       - zod
 
-  web3-eth@4.11.1(typescript@5.8.3)(zod@3.25.76):
+  web3-eth@4.11.1(typescript@5.9.2)(zod@3.25.76):
     dependencies:
       setimmediate: 1.0.5
       web3-core: 4.7.1
       web3-errors: 1.3.1
-      web3-eth-abi: 4.4.1(typescript@5.8.3)(zod@3.25.76)
+      web3-eth-abi: 4.4.1(typescript@5.9.2)(zod@3.25.76)
       web3-eth-accounts: 4.3.1
       web3-net: 4.1.0
       web3-providers-ws: 4.0.8
@@ -3146,17 +3149,17 @@ snapshots:
       web3-types: 1.10.0
       zod: 3.25.76
 
-  web3@4.16.0(typescript@5.8.3)(zod@3.25.76):
+  web3@4.16.0(typescript@5.9.2)(zod@3.25.76):
     dependencies:
       web3-core: 4.7.1
       web3-errors: 1.3.1
-      web3-eth: 4.11.1(typescript@5.8.3)(zod@3.25.76)
-      web3-eth-abi: 4.4.1(typescript@5.8.3)(zod@3.25.76)
+      web3-eth: 4.11.1(typescript@5.9.2)(zod@3.25.76)
+      web3-eth-abi: 4.4.1(typescript@5.9.2)(zod@3.25.76)
       web3-eth-accounts: 4.3.1
-      web3-eth-contract: 4.7.2(typescript@5.8.3)(zod@3.25.76)
-      web3-eth-ens: 4.4.0(typescript@5.8.3)(zod@3.25.76)
+      web3-eth-contract: 4.7.2(typescript@5.9.2)(zod@3.25.76)
+      web3-eth-ens: 4.4.0(typescript@5.9.2)(zod@3.25.76)
       web3-eth-iban: 4.0.7
-      web3-eth-personal: 4.1.0(typescript@5.8.3)(zod@3.25.76)
+      web3-eth-personal: 4.1.0(typescript@5.9.2)(zod@3.25.76)
       web3-net: 4.1.0
       web3-providers-http: 4.2.0
       web3-providers-ws: 4.0.8
