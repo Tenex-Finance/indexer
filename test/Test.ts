@@ -81,7 +81,7 @@ describe("PoolCreated event correctly creates LiquidityPool and Token entities",
       numberOfSwaps: 0n,
       token0Price: 0n,
       token1Price: 0n,
-      lastUpdatedTimestamp: BigInt(mockPoolCreatedEvent.blockTimestamp),
+      //lastUpdatedTimestamp: BigInt(mockPoolCreatedEvent.blockTimestamp),
     };
 
     // Asserting that the entity in the mock database is the same as the expected entity

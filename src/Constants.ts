@@ -73,7 +73,7 @@ const BSC_CONSTANTS: chainConstants = {
   usdb: USDB,
   firstPriceFetchedBlockNumber: 0,
   rewardToken: TENEX,
-  rpcURL: process.env.ENVIO_BSC_RPC_URL || 'https://bnb-mainnet.g.alchemy.com/v2/cHHlg7dPcXVn5jwQ23VT0',
+  rpcURL: process.env.ENVIO_BSC_RPC_URL || 'https://bsc-dataseed.bnbchain.org',
   stablecoinPools: [],
   stablecoinPoolAddresses: [],
   testingPoolAddresses: BSC_TESTING_POOL_ADDRESSES,

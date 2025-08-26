@@ -7,9 +7,12 @@ services:
     volumes:
       - db_data_hydra:/var/lib/postgresql/data
     environment:
-      POSTGRES_PASSWORD: ${ENVIO_POSTGRES_PASSWORD:-Tenex650#}}
-      POSTGRES_USER: ${ENVIO_PG_USER:-tenex}
-      POSTGRES_DB: ${ENVIO_PG_DATABASE:-tenex-prod}
+     
+
+      ENVIO_PG_USER: ${ENVIO_PG_USER:-postgres}
+      ENVIO_PG_DATABASE: ${ENVIO_PG_DATABASE:-envio-dev}
+      PG_PASSWORD: ${ENVIO_POSTGRES_PASSWORD:-testing}
+      PG_HOST: envio-postgres-hydra
     networks:
       - my-proxy-net
   # metabase:
