@@ -45,7 +45,7 @@ networks:
     contracts:
       - name: PoolFactory
         address:
-          - 0xE8f79323A023123A0AfB8Ac3F4f48d29e2AC6083
+          - 0x9eFFb01a763f1ED690273167d045C69c4df2F0C3
       - name: Pool
         address:
           - 0x3a497D73A272382AE445A0628A2C41c3B0889EB3
@@ -59,4 +59,4 @@ networks:
           - 0x9FC1091Bf704F2a74399E2ae98517202cab821b6 # need to change
       - name: PriceFetcher
         address:
-           - 0x5f08F9A37F3c3DD6596b81e58C635597c61Be5DE
+          - 0x5f08F9A37F3c3DD6596b81e58C635597c61Be5DE
